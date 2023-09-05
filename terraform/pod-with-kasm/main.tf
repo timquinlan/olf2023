@@ -44,8 +44,7 @@ variable "workspaces_namespace" {
   Kubernetes namespace to deploy the workspace into
 
   EOF
-  #default = ""
-  default = "coder"
+  default = ""
 }
 
 data "coder_parameter" "dotfiles_url" {
@@ -172,8 +171,7 @@ resource "kubernetes_pod" "main" {
   ]  
   metadata {
     name = "coder-${data.coder_workspace.me.owner}-${data.coder_workspace.me.name}"
-    #namespace = var.workspaces_namespace
-    namespace = local.workspaces_namespace
+    namespace = var.workspaces_namespace
   }
   spec {
     security_context {
@@ -219,8 +217,7 @@ resource "kubernetes_pod" "main" {
 resource "kubernetes_persistent_volume_claim" "home-directory" {
   metadata {
     name      = "home-coder-${data.coder_workspace.me.owner}-${data.coder_workspace.me.name}"
-    #namespace = var.workspaces_namespace
-    namespace = local.workspaces_namespace
+    namespace = var.workspaces_namespace
   }
   wait_until_bound = false    
   spec {

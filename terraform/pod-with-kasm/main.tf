@@ -51,7 +51,7 @@ data "coder_parameter" "dotfiles_url" {
   name        = "Dotfiles URL"
   description = "Personalize your workspace"
   type        = "string"
-  default     = "git@github.com:sharkymark/dotfiles.git"
+  default     = "git@github.com:timquinlan/demo_dotfiles.git"
   mutable     = true 
   icon        = "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
 }

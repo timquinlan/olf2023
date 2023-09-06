@@ -114,17 +114,17 @@ data "coder_parameter" "image" {
   type = "string"
   description = "Choose your OS"
   mutable = true
-  default = "trquacker/cadebian"
+  default = "trquacker/debian"
   icon        = "https://www.debian.org/logos/openlogo-100.jpg"
 
   option {
     name = "Debian"
-    value = "trquacker/cadebian"
+    value = "trquacker/debian"
     icon        = "https://www.debian.org/logos/openlogo-100.jpg"
   }
   option {
     name = "Ubuntu"
-    value = "trquacker/catest"
+    value = "trquacker/coder-enterprise"
     icon        = "https://assets.ubuntu.com/v1/a7e3c509-Canonical%20Ubuntu.svg"
   }
 }
